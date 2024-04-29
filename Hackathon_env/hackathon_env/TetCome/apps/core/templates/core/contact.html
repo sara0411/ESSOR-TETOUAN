@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Contact | {% endblock %}
+
+{% block content %} <div class="content-wrapper" id="contact">
+    <!-- Third replaceble image -->
+
+    <!-- Custom form, important note: you will need additional code in order to make this form work -->
+    <form class="contact-form astonish" action="#" method="post" data-animation="fadeInRight">
+         <h2 class="section-title">Contact Us</h2>
+         <div class="grid">
+              <div class="grid-col-sm-12 grid-col-md-6">
+                   <div class="form-group">
+                        <input type="text" name="firstName" required>
+                        <label for="firstName">First Name:</label>
+                   </div>
+              </div>
+              <div class="grid-col-sm-12 grid-col-md-6">
+                   <div class="form-group">
+                        <input type="text" name="lastName" required>
+                        <label for="lasttName">Last Name:</label>
+                   </div>
+              </div>
+              <div class="grid-col-sm-12">
+                   <div class="form-group">
+                        <input type="text" name="email" required>
+                        <label for="email">Email:</label>
+                   </div>
+              </div>
+              <div class="grid-col-sm-12">
+                   <div class="form-group">
+                        <textarea name="message" required></textarea>
+                        <label for="message">Message:</label>
+                   </div>
+              </div>
+         </div>
+         <input class="btn btn-outline-teal" type="submit" value="Send">
+    </form>
+</div>
+ {% endblock %}
