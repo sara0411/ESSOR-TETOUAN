@@ -21,6 +21,8 @@
           <!-- Custom CSS -->
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
           <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+          <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+
 
 
      </head>
@@ -59,9 +61,7 @@
           </button>
         </div>
 
-        <a href="#" class="logo">
-          <img src="{% static 'images/logo.png' %}" width="179" height="26" alt="Glowing">
-        </a>
+        <a href="#" class="logo">  <strong></strong>ESSORTETOUAN</a>
 
         <div class="header-actions">
 
@@ -108,6 +108,16 @@
               <a href="#blog" class="navbar-link has-after">Blog</a>
             </li>
 
+            <li>
+              <a href="{% url 'login'%}" class="navbar-link has-after">Sign Up</a>
+            </li>
+
+            <li>
+              <a href="{% url 'predict'%}" class="navbar-link has-after">prompt</a>
+            </li>
+
+
+
           </ul>
         </nav>
 
@@ -128,9 +138,7 @@
     <div class="mobile-navbar" data-navbar>
 
       <div class="wrapper">
-        <a href="#" class="logo">
-          <img src="{% static 'images/logo.png' %}" width="179" height="26" alt="Glowing">
-        </a>
+        <a href="#" class="logo">    ESSORTETOUAN    </a>
 
         <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
@@ -159,20 +167,17 @@
           <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
         </li>
 
+
+        <li>
+          <a href="{% url 'upload_image'%}" class="navbar-link has-after">prompt</a>
+        </li>
+
       </ul>
 
     </div>
 
     <div class="overlay" data-nav-toggler data-overlay></div>
   </div>
-
-
-
-
-
-          
-
-
           <section class="section">
             <div class="container">
                 {% block content %}
